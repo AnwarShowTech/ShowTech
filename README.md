@@ -55,7 +55,7 @@ A modern, elegant portfolio website for ShowTech — showcasing professional sof
 
 Edit the WhatsApp number in all HTML files:
 ```html
-<a href="https://wa.me/234XXXXXXXXXX">
+<a href="https://wa.me/2347049894502">
 ```
 
 ### Update Social Media Links
