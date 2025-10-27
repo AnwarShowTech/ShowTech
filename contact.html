@@ -61,8 +61,8 @@
               <input type="text" id="name" name="name" required placeholder="John Doe">
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required placeholder="john@example.com">
+              <label for="phone">Phone Number (11 digits)</label>
+              <input type="tel" id="phone" name="phone" required placeholder="09028797786" pattern="^[0-9]{11}$" maxlength="11" inputmode="numeric" title="Please enter exactly 11 digits (e.g., 09028797786)">
             </div>
             <div class="form-group">
               <label for="subject">Subject</label>
@@ -199,8 +199,6 @@
     </div>
   </footer>
 
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="script.js"></script>
   <script src="contact.js"></script>
 </body>

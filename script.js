@@ -52,11 +52,7 @@ if (currentYearSpan) {
   currentYearSpan.textContent = new Date().getFullYear();
 }
 
-// Form validation and basic interactions
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  // Form submission is handled in contact.js
-}
+// Form submission is handled in contact.js (loaded after this script)
 
 // Add animation on scroll
 const observerOptions = {
