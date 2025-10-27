@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — ShowTech</title>
+  <meta name="description" content="Showcase of ShowTech projects — Android apps, web applications, and software solutions">
+  <link rel="icon" type="image/png" href="mylogo.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="projects.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="mylogo.png" alt="ShowTech Logo" class="logo-image">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://wa.me/2347049894502" class="btn-hire" target="_blank">Hire Me</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="hero-tag">My Work</span>
+        <h1 class="hero-title">Featured Projects</h1>
+        <p class="hero-description">Showcasing some of my best work across Android and web development</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="android">Android</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-category="android">
+          <div class="project-image">
+            <div class="project-badge">Android</div>
+            <div class="image-placeholder gradient-1">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <rect x="5" y="2" width="14" height="20" rx="2" fill="white"/>
+                <circle cx="12" cy="8" r="2" fill="#667eea"/>
+                <path d="M7 15h10" stroke="#667eea" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 18h8" stroke="#667eea" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">asdata — Data Purchase App</h3>
+            <p class="project-description">A modern Android app built with Jetpack Compose that allows users to purchase MTN, Airtel, and Glo data plans seamlessly via API integration.</p>
+            <div class="project-tags">
+              <span>Kotlin</span>
+              <span>Jetpack Compose</span>
+              <span>Firebase</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Download APK</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-2">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Donation Management System</h3>
+            <p class="project-description">A comprehensive full-stack web application for managing donations, tracking donors, and generating reports. Built with React and Firebase backend.</p>
+            <div class="project-tags">
+              <span>React</span>
+              <span>Firebase</span>
+              <span>Tailwind CSS</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="tools">
+          <div class="project-image">
+            <div class="project-badge">Tools</div>
+            <div class="image-placeholder gradient-3">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="2" fill="white"/>
+                <rect x="7" y="7" width="10" height="10" rx="1" fill="#667eea"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Password Recovery Tool</h3>
+            <p class="project-description">A professional toolkit for Windows password recovery and removal. Secure, efficient, and built for authorized access only.</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Windows API</span>
+              <span>Security</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Learn More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="android">
+          <div class="project-image">
+            <div class="project-badge">Android</div>
+            <div class="image-placeholder gradient-4">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="2" width="20" height="20" rx="2" fill="white"/>
+                <circle cx="8" cy="8" r="2" fill="#667eea"/>
+                <rect x="12" y="6" width="8" height="4" rx="1" fill="#667eea"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Daditata App</h3>
+            <p class="project-description">A data purchase application similar to Asdata, allowing users to buy data bundles for MTN, Airtel, Glo, and other networks seamlessly.</p>
+            <div class="project-tags">
+              <span>Kotlin</span>
+              <span>Jetpack Compose</span>
+              <span>Firebase</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Download APK</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="android">
+          <div class="project-image">
+            <div class="project-badge">Android</div>
+            <div class="image-placeholder gradient-6">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="2" fill="white"/>
+                <rect x="6" y="6" width="3" height="2" fill="#667eea"/>
+                <rect x="6" y="9" width="3" height="2" fill="#667eea"/>
+                <rect x="6" y="12" width="3" height="2" fill="#667eea"/>
+                <rect x="6" y="15" width="8" height="3" rx="1" fill="#667eea"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Calculator App</h3>
+            <p class="project-description">A modern, feature-rich calculator app with basic and advanced operations, beautiful Material Design interface, and history tracking.</p>
+            <div class="project-tags">
+              <span>Kotlin</span>
+              <span>Material Design</span>
+              <span>Room Database</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Download APK</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-5">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <path d="M3 3h18v18H3V3z" fill="white"/>
+                <path d="M8 7h8M8 11h5M8 15h8" stroke="#667eea" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Basic Blog</h3>
+            <p class="project-description">A clean and responsive blog platform with post management, categories, comments, and admin dashboard for content creators.</p>
+            <div class="project-tags">
+              <span>HTML/CSS</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-7">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="white" stroke="#667eea" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Event Management System</h3>
+            <p class="project-description">Complete event management solution for creating, managing, and tracking events with registration, ticketing, and real-time updates.</p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Bootstrap</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-8">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="5" width="18" height="14" rx="1" fill="white"/>
+                <path d="M8 9h8M8 13h6M8 17h4" stroke="#667eea" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Hostel Allocation System</h3>
+            <p class="project-description">Automated hostel management system for students with room allocation, fee management, and maintenance tracking features.</p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>JavaScript</span>
+              <span>MySQL</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-1">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="6" fill="white"/>
+                <path d="M3 22v-4a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v4" stroke="#667eea" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Job Portal</h3>
+            <p class="project-description">Comprehensive job portal for job seekers and employers with resume upload, application tracking, and job matching algorithms.</p>
+            <div class="project-tags">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-2">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <path d="M9 11l3 3L22 4" fill="white"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="#667eea" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Fitness Record Management</h3>
+            <p class="project-description">Digital fitness tracking system for gyms and trainers to manage member records, workouts, progress tracking, and schedules.</p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Chart.js</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-3">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="6" width="18" height="14" rx="1" fill="white"/>
+                <path d="M7 10h10M7 14h7M7 18h4" stroke="#667eea" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Online Result System</h3>
+            <p class="project-description">Student result management system with secure login, grade calculation, report generation, and parent access portal.</p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Bootstrap</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-4">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2v20M2 12h20" stroke="#667eea" stroke-width="2"/>
+                <circle cx="12" cy="12" r="3" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Online Voting Portal</h3>
+            <p class="project-description">Secure electronic voting system with voter authentication, ballot management, real-time results, and admin dashboard.</p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>JavaScript</span>
+              <span>MySQL</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-5">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16M4 12h16M4 17h7" stroke="#667eea" stroke-width="2"/>
+                <circle cx="16" cy="17" r="3" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">School Admission System</h3>
+            <p class="project-description">Complete admission management system for schools with online application, document upload, and automated processing.</p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Bootstrap</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <div class="project-badge">Web</div>
+            <div class="image-placeholder gradient-6">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="5" width="20" height="14" rx="1" fill="white"/>
+                <circle cx="12" cy="12" r="3" fill="#667eea"/>
+              </svg>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Transportation Management System</h3>
+            <p class="project-description">Fleet management system for tracking vehicles, routes, schedules, and passenger management with real-time updates.</p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Google Maps API</span>
+            </div>
+            <div class="project-footer">
+              <a href="#" class="project-link">View Project</a>
+              <a href="#" class="project-link primary">Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Android Apps</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Web Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Completed Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Want to Work Together?</h2>
+        <p class="cta-description">Let's create something amazing for your next project.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-large">Get In Touch</a>
+          <a href="https://wa.me/2347049894502" class="btn btn-secondary btn-large" target="_blank">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="mylogo.png" alt="ShowTech Logo" class="footer-logo">
+          <p>ShowTech — Professional software solutions</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@AnwarDoubleShow" class="social-icon" target="_blank" title="YouTube">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            YouTube
+          </a>
+          <a href="https://github.com/AnwarShowTech" class="social-icon" target="_blank" title="GitHub">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://github.com/showshowdoma" class="social-icon" target="_blank" title="GitHub 2">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub 2
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> ShowTech — Shaw. Built with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="projects.js"></script>
+</body>
+</html>
