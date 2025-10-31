@@ -566,39 +566,30 @@
     padding: 0.75rem 1.25rem;
     font-size: 0.875rem;
   }
-  /* ============================= */
-/* 🌈 GLOBAL IMPROVEMENTS ADDED  */
-/* ============================= */
+ /* ================================ */
+/* CONTACT PAGE - FULLY RESPONSIVE  */
+/* MATCHED RESPONSIVENESS LEVEL     */
+/* LIKE THE PROJECTS SECTION STYLE  */
+/* ================================ */
 
-/* ✅ ADDED: Universal reset for better responsive scaling */
+/* ✅ Base Responsive Reset */
 * {
   box-sizing: border-box;
   max-width: 100%;
 }
-
 img, video {
   width: 100%;
   height: auto;
 }
-
-/* ✅ ADDED: Fluid root font size for scaling text */
 html {
-  font-size: clamp(14px, 1.5vw, 18px);
   scroll-behavior: smooth;
 }
 
-/* ✅ ADDED: Responsive container utility */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 2rem;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-/* Page Hero */
+/* ------------------------------- */
+/* PAGE HERO                      */
+/* ------------------------------- */
 .page-hero {
-  padding: clamp(6rem, 8vw, 8rem) 0 clamp(3rem, 4vw, 4rem); /* ✅ FIXED: made padding fluid */
+  padding: 8rem 0 4rem;
   background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #6366f1 100%);
   text-align: center;
   position: relative;
@@ -610,8 +601,8 @@ html {
   position: absolute;
   top: -50%;
   right: -20%;
-  width: clamp(400px, 60vw, 800px); /* ✅ FIXED: fluid width */
-  height: clamp(400px, 60vw, 800px); /* ✅ FIXED: fluid height */
+  width: 800px;
+  height: 800px;
   background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(80px);
@@ -638,59 +629,60 @@ html {
 }
 
 .page-hero .hero-title {
-  font-size: clamp(1.8rem, 4vw, 3.5rem); /* ✅ FIXED: made font-size responsive */
+  font-size: 3.5rem;
   font-weight: 900;
   color: white;
   margin-bottom: 1rem;
 }
 
 .page-hero .hero-description {
-  font-size: clamp(1rem, 2vw, 1.25rem); /* ✅ FIXED: fluid font size */
+  font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Contact Section */
+/* ------------------------------- */
+/* CONTACT SECTION                 */
+/* ------------------------------- */
 .contact-section {
-  padding: clamp(3rem, 6vw, 6rem) 0; /* ✅ FIXED: fluid padding */
+  padding: 6rem 0;
   background: #0a0a0a;
 }
 
+/* ✅ FIXED for full responsiveness */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 4vw, 3rem); /* ✅ FIXED: fluid gap */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* ✅ NEW: Adaptive grid for tablet and large screens */
-@media (max-width: 1200px) {
-  .contact-grid {
-    grid-template-columns: 2fr 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* ✅ FIXED for consistent box spacing */
 .contact-form-wrapper,
 .contact-info-wrapper {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
-  padding: clamp(1.5rem, 3vw, 2.5rem); /* ✅ FIXED: adaptive padding */
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+.contact-form-wrapper:hover,
+.contact-info-wrapper:hover {
+  border-color: rgba(236, 72, 153, 0.3);
+  transform: translateY(-5px);
 }
 
+/* ------------------------------- */
+/* FORM STYLING                    */
+/* ------------------------------- */
 .form-header {
   margin-bottom: 2rem;
 }
 
 .form-title {
-  font-size: clamp(1.5rem, 2.5vw, 2rem); /* ✅ FIXED: fluid title size */
+  font-size: 2rem;
   font-weight: 800;
   color: white;
   margin-bottom: 0.5rem;
@@ -698,22 +690,56 @@ html {
 
 .form-subtitle {
   color: rgba(255, 255, 255, 0.6);
-  font-size: clamp(0.875rem, 1.5vw, 0.95rem); /* ✅ FIXED */
+  font-size: 0.95rem;
 }
 
-/* ✅ ADDED: Make form elements full width on mobile */
-@media (max-width: 600px) {
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-  }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: rgba(102, 126, 234, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ✅ FIXED input placeholder readability */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .btn {
-  padding: clamp(0.875rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem); /* ✅ FIXED */
+  padding: 1rem 2rem;
   border-radius: 1rem;
   font-weight: 600;
-  font-size: clamp(0.9rem, 1.5vw, 1rem); /* ✅ FIXED */
+  font-size: 1rem;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
@@ -724,43 +750,150 @@ html {
   cursor: pointer;
 }
 
-.btn-large {
-  padding: clamp(1rem, 3vw, 1.25rem);
-  font-size: clamp(1rem, 2vw, 1.125rem);
+.btn-primary {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  color: white;
+  box-shadow: 0 10px 40px rgba(236, 72, 153, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 50px rgba(236, 72, 153, 0.4);
 }
 
-/* ✅ ADDED: Improve info layout wrapping on small screens */
-@media (max-width: 640px) {
-  .info-item {
-    flex-wrap: wrap;
-    gap: 0.75rem;
+/* ------------------------------- */
+/* CONTACT INFO                    */
+/* ------------------------------- */
+.contact-info-card {
+  margin-bottom: 2rem;
+}
+.info-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+.info-description {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* ✅ FIXED flex wrapping for mobile */
+.info-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Quick links & social links */
+.quick-links,
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.quick-link,
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 0.75rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+.quick-link:hover,
+.social-link:hover {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+/* ------------------------------- */
+/* ✅ RESPONSIVE MEDIA QUERIES     */
+/* ------------------------------- */
+
+/* Tablets */
+@media (max-width: 968px) {
+  .page-hero .hero-title {
+    font-size: 2.5rem;
+  }
+  .contact-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 
-/* ✅ ADDED: Fluid typography and spacing for small screens */
-@media (max-width: 480px) {
-  .info-title,
-  .form-title {
-    font-size: clamp(1.1rem, 4vw, 1.3rem);
+/* Mobile */
+@media (max-width: 640px) {
+  .page-hero {
+    padding: 6rem 0 3rem;
   }
   .page-hero .hero-title {
-    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    font-size: 2rem;
   }
   .page-hero .hero-description {
-    font-size: clamp(0.85rem, 3vw, 1rem);
+    font-size: 1rem;
+  }
+  .contact-section {
+    padding: 4rem 0;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-wrapper,
+  .contact-info-wrapper {
+    padding: 1.25rem;
+  }
+  .form-title,
+  .info-title {
+    font-size: 1.5rem;
+  }
+  .form-subtitle,
+  .info-description {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
   }
 }
 
-/* ✅ ADDED: Support for very small screens */
+/* Small Mobile */
+@media (max-width: 480px) {
+  .page-hero .hero-title {
+    font-size: 1.5rem;
+  }
+  .page-hero .hero-description {
+    font-size: 0.875rem;
+  }
+  .contact-form {
+    gap: 1.25rem;
+  }
+  .form-group textarea {
+    min-height: 120px;
+  }
+}
+
+/* Very Small Devices */
 @media (max-width: 360px) {
   .btn {
     padding: 0.75rem 1.25rem;
     font-size: 0.875rem;
   }
-  .page-hero .hero-title {
+  .form-title,
+  .info-title {
     font-size: 1.25rem;
   }
 }
+
 
 
   .form-title,
