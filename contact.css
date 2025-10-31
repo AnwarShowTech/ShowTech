@@ -566,6 +566,202 @@
     padding: 0.75rem 1.25rem;
     font-size: 0.875rem;
   }
+  /* ============================= */
+/* 🌈 GLOBAL IMPROVEMENTS ADDED  */
+/* ============================= */
+
+/* ✅ ADDED: Universal reset for better responsive scaling */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+/* ✅ ADDED: Fluid root font size for scaling text */
+html {
+  font-size: clamp(14px, 1.5vw, 18px);
+  scroll-behavior: smooth;
+}
+
+/* ✅ ADDED: Responsive container utility */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Page Hero */
+.page-hero {
+  padding: clamp(6rem, 8vw, 8rem) 0 clamp(3rem, 4vw, 4rem); /* ✅ FIXED: made padding fluid */
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #6366f1 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: clamp(400px, 60vw, 800px); /* ✅ FIXED: fluid width */
+  height: clamp(400px, 60vw, 800px); /* ✅ FIXED: fluid height */
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.page-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-tag {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.page-hero .hero-title {
+  font-size: clamp(1.8rem, 4vw, 3.5rem); /* ✅ FIXED: made font-size responsive */
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.page-hero .hero-description {
+  font-size: clamp(1rem, 2vw, 1.25rem); /* ✅ FIXED: fluid font size */
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: clamp(3rem, 6vw, 6rem) 0; /* ✅ FIXED: fluid padding */
+  background: #0a0a0a;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem); /* ✅ FIXED: fluid gap */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ✅ NEW: Adaptive grid for tablet and large screens */
+@media (max-width: 1200px) {
+  .contact-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form-wrapper,
+.contact-info-wrapper {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem); /* ✅ FIXED: adaptive padding */
+}
+
+.form-header {
+  margin-bottom: 2rem;
+}
+
+.form-title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem); /* ✅ FIXED: fluid title size */
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: clamp(0.875rem, 1.5vw, 0.95rem); /* ✅ FIXED */
+}
+
+/* ✅ ADDED: Make form elements full width on mobile */
+@media (max-width: 600px) {
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+}
+
+.btn {
+  padding: clamp(0.875rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem); /* ✅ FIXED */
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.5vw, 1rem); /* ✅ FIXED */
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-large {
+  padding: clamp(1rem, 3vw, 1.25rem);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+/* ✅ ADDED: Improve info layout wrapping on small screens */
+@media (max-width: 640px) {
+  .info-item {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+/* ✅ ADDED: Fluid typography and spacing for small screens */
+@media (max-width: 480px) {
+  .info-title,
+  .form-title {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+  }
+  .page-hero .hero-title {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+  }
+  .page-hero .hero-description {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+}
+
+/* ✅ ADDED: Support for very small screens */
+@media (max-width: 360px) {
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+  .page-hero .hero-title {
+    font-size: 1.25rem;
+  }
+}
+
 
   .form-title,
   .info-title {
